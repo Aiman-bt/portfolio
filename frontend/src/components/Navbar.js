@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [classname, setClassname] = useState("navContainer gray");
@@ -12,31 +13,34 @@ function Navbar() {
 
   return (
     <div className={classname}>
-      <div className="navLogo">
+      <Link to="/" className="navLogo">
         <h1>
           <span className="d">D</span>eveloper
         </h1>
-      </div>
+      </Link>
       <div className="navLinkContainer">
-        <div className="navLinks">
+        <Link to="/work" className="navLinks">
           <span className="w">w</span>ork
-        </div>
-        <div className="navLinks">
+        </Link>
+        <Link to="/services" className="navLinks">
           <span className="s">s</span>ervices
-        </div>
-        <div className="navLinks">
+        </Link>
+        <Link to="/about" className="navLinks">
           <span className="a">a</span>bout
-        </div>
-        <div className="navLinks">
+        </Link>
+        <Link to="/projects" className="navLinks">
           <span className="p">P</span>rojects
-        </div>
-        <div className="navLinks">
+        </Link>
+        <Link to="/blogs" className="navLinks">
           <span className="b">b</span>logs
-        </div>
+        </Link>
+        <Link to="/login" className="navLinks">
+          Login
+        </Link>
       </div>
-      <div className="navContact">
+      <Link to="/contactMe" className="navContact">
         <span className="c">c</span>ontact Me
-      </div>
+      </Link>
     </div>
   );
 }
