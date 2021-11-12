@@ -2,7 +2,11 @@ import React from "react";
 
 function Banner() {
   return (
-    <div className="subContainer">
+    <div id="banner" className="subContainer bannerBack">
+      <h1 className="bannerWatermark">
+        <span1>MERN</span1>
+        <span>Full-Stack</span>
+      </h1>
       <div className="banner">
         <div className="typewriter">
           <h1>

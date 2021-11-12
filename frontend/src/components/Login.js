@@ -16,16 +16,23 @@ class Login extends React.Component {
   render() {
     return (
       <div className="subContainer">
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            User Name: <input type="text" name="userName" />
-          </label>
-          <label>
-            User Name: <input type="text" name="userName" />
-          </label>
-          <button type="submit" value="submit">
-            Login
-          </button>
+        <form className="contactForm">
+          <div>
+            Full Name :
+            <input type="text" />
+          </div>
+          <div>
+            Contact Number :
+            <input type="text" />
+          </div>
+          <div>
+            Email Id :
+            <input type="text" />
+          </div>
+          <div>
+            Question :
+            <input type="text" />
+          </div>
         </form>
       </div>
     );

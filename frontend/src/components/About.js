@@ -1,16 +1,30 @@
 import React from "react";
+const url = "https://api.github.com/users/aiman-bt";
+
 function About() {
+  const [repos, setRepos] = React.useState([]);
+  window.addEventListener("load", async () => {
+    const response = await fetch(`${url}/repos`);
+    const data = await response.json();
+    setRepos(data);
+  });
+  const repoList = repos.map((value) => {
+    const { id, name } = value;
+    return (
+      <a href={`https://github.com/aiman-bt/${name}`} className="cards" id={id}>
+        <h2>{name}</h2>
+      </a>
+    );
+  });
   return (
-    <div className="subContainer">
-      <h1>
-        About, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde ut
-        excepturi iste labore totam rem officiis autem qui, laboriosam, sed
-        consequatur corrupti aspernatur esse, dolore at doloremque! Mollitia,
-        facere. Necessitatibus Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Aspernatur commodi similique pariatur quas, eum ipsam
-        facere consequatur quod velit animi optio rem iste sed beatae ipsa
-        corporis quos voluptatibus blanditiis!.
-      </h1>
+    <div id="about">
+      <div className="aboutWatermark">
+        <span>About</span>
+      </div>
+      <div>
+        <h3>These are my Github repositories</h3>
+        <div className="cardContainer">{repoList}</div>
+      </div>
     </div>
   );
 }

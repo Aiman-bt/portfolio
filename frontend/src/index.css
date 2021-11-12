@@ -2,96 +2,308 @@
   padding: 0;
   margin: 0;
 }
+
 ::-webkit-scrollbar {
-  display: none;
+  width: 0.2vw;
+}
+::-webkit-scrollbar-thumb {
+  background-color: red;
+}
+::-webkit-scrollbar-track {
+  background: none;
+}
+#root {
+  scroll-behavior: smooth;
 }
 body {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background-color: black;
-  color: white;
+  color: rgb(133, 130, 130);
 }
 .container {
   display: flex;
   width: 100vw;
   flex-direction: column;
   align-items: center;
+  scroll-behavior: smooth;
+}
+.upperspace {
+  display: block;
+  width: 100vw;
+  height: 30vh;
+}
+.contactForm {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-evenly;
+  margin-top: 300px;
+  width: auto;
+  border-radius: 20px;
+  padding: 20px;
+  background-color: rgba(128, 128, 128, 0.48);
+  margin-bottom: 300px;
+}
+.contactForm > div {
+  font-size: 40px;
+}
+.line {
+  display: flex;
+  justify-content: space-between;
+}
+.linesubmit {
+  display: flex;
+  justify-content: center;
+}
+.contactForm > div > input {
+  height: 40px;
+  width: auto;
+  margin-left: 30px;
+  border-radius: 10px;
+  right: 0px;
+  padding: 1px;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  font-weight: bolder;
+  position: relative;
+  border: none;
+  border-radius: 0px;
+}
+.contactForm > div > input:focus {
+  outline: none;
+}
+.BtnSubmit {
+  width: 50px;
+  height: 30px;
+  background-color: gray;
+  border-radius: 0px;
 }
 .navContainer {
+  display: flex;
   top: 10px;
   z-index: 100;
   position: fixed;
   font-weight: bold;
-  display: flex;
   width: 98vw;
-  height: 10vh;
+  height: auto;
   border-radius: 5vh;
   align-items: center;
   justify-content: space-around;
 }
-.gray {
-  background-color: rgb(7, 42, 46);
+.footer {
+  background-color: rgba(61, 58, 58, 0.8);
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
 }
+.footer > h2 {
+  font-weight: bolder;
+  font-size: 30px;
+  color: black;
+}
+/* this is for navbar */
+
 .navSticky {
   backdrop-filter: blur(10px);
 }
 .navLogo {
+  height: 50px;
+  line-height: 50px;
+  padding: auto 10px;
+  cursor: pointer;
   text-transform: uppercase;
+}
+.navLogo:hover {
+  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #e60000, 0 0 20px #e68a00,
+    0 0 25px #e65c00, 0 0 30px #e60000, 0 0 35px #e60000 inset;
+  transition-duration: 0.2s;
 }
 .d,
 .w,
-.s,
 .a,
 .p,
 .b,
-.c {
+.c,
+.l {
   color: red;
 }
-a {
-  text-decoration: none;
-  color: whitesmoke;
+img {
+  height: 40vh;
+  width: 40vw;
+  filter: brightness(60%);
+  border-radius: 20px;
 }
-
+#about {
+  height: 90vh;
+  padding-top: 20vh;
+  width: 100vw;
+  display: flex;
+  background-color: rgba(63, 63, 63, 0.364);
+}
+#about > div > h3 {
+  text-transform: uppercase;
+  font-size: 40px;
+  margin-left: 50vw;
+  margin-bottom: 10vh;
+  font-weight: bolder;
+}
 .navLinkContainer {
   display: flex;
-  width: 35vw;
+  height: 70px;
+  width: auto;
   justify-content: space-between;
 }
 .navLinks {
+  display: block;
+  line-height: 50px;
+  height: 50px;
+  cursor: pointer;
+  margin: 10px 0px;
+  padding: 0px 20px;
+  text-align: center;
+  justify-content: center;
   text-transform: uppercase;
   font-size: 20px;
+  border-radius: 50px;
+  transition-duration: 0.2s;
+}
+.navLinks:hover {
+  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #e60000, 0 0 20px #e68a00,
+    0 0 25px #e65c00, 0 0 30px #e60000, 0 0 35px #e60000 inset;
+  transition-duration: 0.2s;
 }
 .navContact {
   background-color: black;
   border-radius: 30px;
-  padding: 20px 30px;
-
+  padding: 10px 20px;
   text-transform: uppercase;
   font-size: 20px;
+  cursor: pointer;
+}
+.navContact:hover {
+  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #e60000, 0 0 20px #e68a00,
+    0 0 25px #e65c00, 0 0 30px #e60000, 0 0 35px #e60000 inset;
+  transition-duration: 0.2s;
 }
 .subContainer {
   align-items: center;
   justify-content: center;
+  text-align: center;
+  flex-direction: column;
   display: flex;
-  height: 80vh;
+  height: auto;
+  width: 100vw;
+  margin: 5px 0px;
+}
+#contact {
+  background-color: rgba(36, 35, 35, 0.8);
+  margin-bottom: 5vh;
+  display: flex;
+  width: 100vw;
+}
+.contactWatermark {
+  text-transform: uppercase;
+  letter-spacing: 10vw;
+  position: absolute;
+  left: 2vw;
+  font-weight: bolder;
+  font-size: 10em;
+  color: black;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.bannerBack {
+  background-size: cover;
+  background-blend-mode: color;
+  height: 95vh;
+  width: 100vw;
+}
+.aboutWatermark {
+  display: block;
+
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.aboutWatermark > span {
+  position: absolute;
+  left: 1vw;
+  margin: 40px;
+  color: black;
+  font-size: 20vh;
+  font-weight: bolder;
+  letter-spacing: 30px;
+  text-transform: uppercase;
+}
+.bannerWatermark {
+  display: block;
+  z-index: -100;
+}
+.bannerWatermark > span1 {
+  text-transform: uppercase;
+  font-size: 20vh;
+  position: absolute;
+  letter-spacing: 100px;
+  top: 150px;
+  left: 10px;
+  color: rgba(63, 63, 63, 0.364);
+}
+.bannerWatermark > span {
+  text-transform: uppercase;
+  font-size: 20vh;
+  position: absolute;
+  top: 600px;
+  right: 20px;
+  color: rgba(63, 63, 63, 0.412);
 }
 .banner {
-  margin-top: 30vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+
+  justify-content: center;
+  align-items: left;
 }
+
 .banner h2 {
   margin-top: 10px;
 }
+.work-text {
+  font-size: 50px;
+}
+.cardContainer {
+  display: grid;
+  height: auto;
+  position: absolute;
+  right: 10vw;
+  justify-content: space-between;
+  width: 40vw;
+  grid-template-columns: auto auto;
+}
+.cards {
+  display: block;
+  height: 100px;
+  margin: 10px 0px;
+  width: 300px;
+  border-radius: 10px;
+  border: 4px solid rgb(0, 0, 0);
+}
 
 .typewriter h1 {
-  color: #fff;
+  color: rgb(133, 130, 130);
   text-transform: uppercase;
   font-size: 40px;
   letter-spacing: 10px;
   overflow: hidden;
-  border-right: 0.15em solid rgb(13, 247, 32);
+  border-right: 0.15em solid rgb(100, 0, 0);
   white-space: nowrap;
   animation: typing 1.5s steps(30, end), blink-caret 0.5s step-end infinite;
 }
@@ -111,6 +323,70 @@ a {
     border-color: transparent;
   }
   50% {
-    border-color: rgb(13, 247, 32);
+    border-color: rgb(100, 0, 0);
   }
+}
+.hamburger {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .navLinkContainer {
+    display: none;
+  }
+  .navContact {
+    display: none;
+  }
+  .navContainer {
+    justify-content: space-evenly;
+  }
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    width: 40px;
+    height: 30px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .hamburger > span {
+    background-color: rgb(133, 130, 130);
+    height: 3px;
+    border-radius: 1px;
+    width: 100%;
+  }
+  .banner > .typewriter,
+  .banner > h2 {
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+}
+
+a {
+  text-decoration: none;
+  color: rgb(133, 130, 130);
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  height: 20vh;
+  justify-content: space-between;
+}
+
+.workContainer {
+  display: flex;
+  height: auto;
+  width: 100vw;
+  justify-content: space-evenly;
+}
+.leftContainerWork,
+.rightContainerWork {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 200vh;
+
+  width: 40vw;
 }

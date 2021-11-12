@@ -2,34 +2,33 @@ import React from "react";
 
 function Contact() {
   return (
-    <div className="subContainer">
-      <h1>
-        Contact Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
-        ut excepturi iste labore totam rem officiis autem qui, laboriosam, sed
-        consequatur corrupti aspernatur esse, dolore at doloremque! Mollitia,
-        facere. Necessitatibus Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Aspernatur commodi similique pariatur quas, eum ipsam
-        facere consequatur quod velit animi optio rem iste sed beatae ipsa
-        corporis quos voluptatibus blanditiis!
-      </h1>
-      <h1>
-        Contact Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
-        ut excepturi iste labore totam rem officiis autem qui, laboriosam, sed
-        consequatur corrupti aspernatur esse, dolore at doloremque! Mollitia,
-        facere. Necessitatibus Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Aspernatur commodi similique pariatur quas, eum ipsam
-        facere consequatur quod velit animi optio rem iste sed beatae ipsa
-        corporis quos voluptatibus blanditiis!
-      </h1>
-      <h1>
-        Contact Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
-        ut excepturi iste labore totam rem officiis autem qui, laboriosam, sed
-        consequatur corrupti aspernatur esse, dolore at doloremque! Mollitia,
-        facere. Necessitatibus Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Aspernatur commodi similique pariatur quas, eum ipsam
-        facere consequatur quod velit animi optio rem iste sed beatae ipsa
-        corporis quos voluptatibus blanditiis!
-      </h1>
+    <div id="contact">
+      <div>
+        <span className="contactWatermark">Hola!</span>
+      </div>
+      <form className="contactForm">
+        <div className="line">
+          <span>Full Name </span>
+          <input type="text" />
+        </div>
+        <div className="line">
+          <span> Contact Number :</span>
+          <input type="text" />
+        </div>
+        <div className="line">
+          <span> Email Id :</span>
+          <input type="text" />
+        </div>
+        <div className="line">
+          <span>Question :</span>
+          <input type="text" />
+        </div>
+        <div className="linesubmit">
+          <button type="submit" className="BtnSubmit">
+            Submit
+          </button>
+        </div>
+      </form>
     </div>
   );
 }

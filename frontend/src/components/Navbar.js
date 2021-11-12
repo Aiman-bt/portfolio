@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 function Navbar() {
   const [classname, setClassname] = useState("navContainer gray");
@@ -12,35 +12,44 @@ function Navbar() {
   });
 
   return (
-    <div className={classname}>
-      <Link to="/" className="navLogo">
+    <div id="navbar" className={classname}>
+      <Link
+        className="navLogo"
+        scroll={true}
+        duration={1000}
+        onClick={() => {
+          scroll.scrollToTop();
+        }}
+      >
         <h1>
           <span className="d">D</span>eveloper
         </h1>
       </Link>
       <div className="navLinkContainer">
-        <Link to="/work" className="navLinks">
-          <span className="w">w</span>ork
-        </Link>
-        <Link to="/services" className="navLinks">
-          <span className="s">s</span>ervices
-        </Link>
-        <Link to="/about" className="navLinks">
+        <Link to="about" className="navLinks" scroll={true} duration={2000}>
           <span className="a">a</span>bout
         </Link>
-        <Link to="/projects" className="navLinks">
+        <Link to="project" className="navLinks" scroll={true} duration={2000}>
           <span className="p">P</span>rojects
         </Link>
-        <Link to="/blogs" className="navLinks">
+        <Link to="work" className="navLinks" scroll={true} duration={2000}>
+          <span className="w">w</span>ork
+        </Link>
+        <Link to="/blogs" className="navLinks" scroll={true} duration={1000}>
           <span className="b">b</span>logs
         </Link>
-        <Link to="/login" className="navLinks">
-          Login
+        <Link to="/login" className="navLinks" scroll={true} duration={1000}>
+          <span className="l">L</span>ogin /<span className="s"> S</span>ignup
         </Link>
       </div>
-      <Link to="/contactMe" className="navContact">
+      <Link to="contact" className="navContact" scroll={true} duration={1000}>
         <span className="c">c</span>ontact Me
       </Link>
+      <div className="hamburger">
+        <span className="span 1"></span>
+        <span className="span 2"></span>
+        <span className="span 3"></span>
+      </div>
     </div>
   );
 }
