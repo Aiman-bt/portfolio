@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link as Links } from "react-router-dom";
 import { Link, animateScroll as scroll } from "react-scroll";
 
 function Navbar() {
@@ -14,8 +15,8 @@ function Navbar() {
   return (
     <div id="navbar" className={classname}>
       <Link
+        to="/"
         className="navLogo"
-        scroll={true}
         duration={1000}
         onClick={() => {
           scroll.scrollToTop();
@@ -26,23 +27,23 @@ function Navbar() {
         </h1>
       </Link>
       <div className="navLinkContainer">
-        <Link to="about" className="navLinks" scroll={true} duration={2000}>
+        <Link to="about" className="navLinks">
           <span className="a">a</span>bout
         </Link>
-        <Link to="project" className="navLinks" scroll={true} duration={2000}>
+        <Link to="projects" className="navLinks">
           <span className="p">P</span>rojects
         </Link>
-        <Link to="work" className="navLinks" scroll={true} duration={2000}>
+        <Link to="work" className="navLinks">
           <span className="w">w</span>ork
         </Link>
-        <Link to="/blogs" className="navLinks" scroll={true} duration={1000}>
+        <Links to="/blogs" className="navLinks">
           <span className="b">b</span>logs
-        </Link>
-        <Link to="/login" className="navLinks" scroll={true} duration={1000}>
-          <span className="l">L</span>ogin /<span className="s"> S</span>ignup
-        </Link>
+        </Links>
+        <Links to="/login/signin" className="navLinks">
+          <span className="l">L</span>ogin /<span className="s">S</span>ignup
+        </Links>
       </div>
-      <Link to="contact" className="navContact" scroll={true} duration={1000}>
+      <Link to="contact" className="navContact">
         <span className="c">c</span>ontact Me
       </Link>
       <div className="hamburger">

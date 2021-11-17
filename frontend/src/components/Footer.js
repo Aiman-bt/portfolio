@@ -6,7 +6,7 @@ function Footer() {
         style={{
           display: "flex",
           height: "5vh",
-          width: "95vw",
+          width: "99vw",
           borderRadius: "20px",
           marginBottom: "20px",
           alignItems: "center",
@@ -17,7 +17,7 @@ function Footer() {
         }}
         className="footer"
       >
-        <h2>designed and developed by Aiman Basharat</h2>
+        <h2>designed and developed by Aiman Basharat @2021</h2>
       </div>
     </>
   );

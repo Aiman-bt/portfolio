@@ -3,9 +3,8 @@ import About from "./components/About";
 import Banner from "./components/Banner";
 import Contact from "./components/Contact";
 import Navbar from "./components/Navbar";
-import Projects from "./components/Projects";
+// import Projects from "./components/Projects";
 import { Switch, Route } from "react-router-dom";
-
 import Blogs from "./components/Blogs";
 import Login from "./components/Login";
 import Work from "./components/Work";
@@ -14,20 +13,15 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <div className="container" id="home">
-      <Navbar />
       <Switch>
         <Route exact path="/">
+          <Navbar />
           <Banner />
-        </Route>
-        {/* <Route path="/about">
           <About />
-        </Route> */}
-        {/* <Route path="/projects">
-          <Projects />
-        </Route> */}
-        {/* <Route path="/work">
+          {/* <Projects /> */}
           <Work />
-        </Route> */}
+          <Contact />
+        </Route>
         <Route path="/blogs">
           <Blogs />
         </Route>
@@ -38,10 +32,6 @@ function App() {
           <Contact />
         </Route>
       </Switch>
-      <About />
-      <Projects />
-      <Work />
-      <Contact />
       <Footer />
     </div>
   );

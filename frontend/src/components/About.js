@@ -1,29 +1,21 @@
 import React from "react";
-const url = "https://api.github.com/users/aiman-bt";
 
 function About() {
-  const [repos, setRepos] = React.useState([]);
-  window.addEventListener("load", async () => {
-    const response = await fetch(`${url}/repos`);
-    const data = await response.json();
-    setRepos(data);
-  });
-  const repoList = repos.map((value) => {
-    const { id, name } = value;
-    return (
-      <a href={`https://github.com/aiman-bt/${name}`} className="cards" id={id}>
-        <h2>{name}</h2>
-      </a>
-    );
-  });
   return (
     <div id="about">
       <div className="aboutWatermark">
         <span>About</span>
       </div>
-      <div>
-        <h3>These are my Github repositories</h3>
-        <div className="cardContainer">{repoList}</div>
+      <div className="aboutContainer">
+        <div className="innerContainer">
+          <h2>
+            I am passionate about web Development, Goal is to achieve a good
+            position by doing satisfying work in IT field. Strongly focused to
+            complete the task in fast-forced environment. I have no desire to
+            play the game of being better than anyone. I am simply trying to be
+            better than the person I were yesterday.
+          </h2>
+        </div>
       </div>
     </div>
   );

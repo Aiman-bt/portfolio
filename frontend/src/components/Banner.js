@@ -4,7 +4,7 @@ function Banner() {
   return (
     <div id="banner" className="subContainer bannerBack">
       <h1 className="bannerWatermark">
-        <span1>MERN</span1>
+        <span className="mern">MERN</span>
         <span>Full-Stack</span>
       </h1>
       <div className="banner">

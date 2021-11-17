@@ -35,59 +35,14 @@ body {
   width: 100vw;
   height: 30vh;
 }
-.contactForm {
-  display: flex;
-  flex-direction: column;
 
-  justify-content: space-evenly;
-  margin-top: 300px;
-  width: auto;
-  border-radius: 20px;
-  padding: 20px;
-  background-color: rgba(128, 128, 128, 0.48);
-  margin-bottom: 300px;
-}
-.contactForm > div {
-  font-size: 40px;
-}
-.line {
-  display: flex;
-  justify-content: space-between;
-}
-.linesubmit {
-  display: flex;
-  justify-content: center;
-}
-.contactForm > div > input {
-  height: 40px;
-  width: auto;
-  margin-left: 30px;
-  border-radius: 10px;
-  right: 0px;
-  padding: 1px;
-  background-color: black;
-  color: white;
-  font-size: 20px;
-  font-weight: bolder;
-  position: relative;
-  border: none;
-  border-radius: 0px;
-}
-.contactForm > div > input:focus {
-  outline: none;
-}
-.BtnSubmit {
-  width: 50px;
-  height: 30px;
-  background-color: gray;
-  border-radius: 0px;
-}
 .navContainer {
   display: flex;
   top: 10px;
   z-index: 100;
   position: fixed;
   font-weight: bold;
+  backdrop-filter: blur(10px);
   width: 98vw;
   height: auto;
   border-radius: 5vh;
@@ -95,21 +50,26 @@ body {
   justify-content: space-around;
 }
 .footer {
-  background-color: rgba(61, 58, 58, 0.8);
+  /* background-color: rgba(61, 58, 58, 0.8); */
+  background: linear-gradient(
+    rgba(16, 15, 15, 0.8),
+    rgb(46, 46, 46),
+    rgb(46, 46, 46),
+    rgb(46, 46, 46),
+    rgba(16, 15, 15, 0.8)
+  );
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
 }
 .footer > h2 {
   font-weight: bolder;
-  font-size: 30px;
+  font-size: 1.2rem;
   color: black;
 }
+
 /* this is for navbar */
 
-.navSticky {
-  backdrop-filter: blur(10px);
-}
 .navLogo {
   height: 50px;
   line-height: 50px;
@@ -128,7 +88,8 @@ body {
 .p,
 .b,
 .c,
-.l {
+.l,
+.s {
   color: red;
 }
 img {
@@ -139,17 +100,36 @@ img {
 }
 #about {
   height: 90vh;
-  padding-top: 20vh;
   width: 100vw;
   display: flex;
   background-color: rgba(63, 63, 63, 0.364);
 }
-#about > div > h3 {
-  text-transform: uppercase;
-  font-size: 40px;
-  margin-left: 50vw;
-  margin-bottom: 10vh;
+.aboutWatermark {
+  height: 90vh;
+  line-height: 90vh;
+  display: block;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.aboutWatermark > span {
+  color: black;
+  font-size: 20vh;
   font-weight: bolder;
+  letter-spacing: 30px;
+  text-transform: uppercase;
+}
+.aboutContainer {
+  display: flex;
+  padding: 2em;
+  text-align: center;
+  width: 90%;
+  height: 100%;
+}
+#blogs {
+  height: 100vh;
 }
 .navLinkContainer {
   display: flex;
@@ -162,7 +142,7 @@ img {
   line-height: 50px;
   height: 50px;
   cursor: pointer;
-  margin: 10px 0px;
+  margin: 10px 5px;
   padding: 0px 20px;
   text-align: center;
   justify-content: center;
@@ -190,65 +170,113 @@ img {
   transition-duration: 0.2s;
 }
 .subContainer {
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  flex-direction: column;
-  display: flex;
-  height: auto;
   width: 100vw;
+  height: auto;
+  display: flex;
   margin: 5px 0px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 #contact {
-  background-color: rgba(36, 35, 35, 0.8);
-  margin-bottom: 5vh;
-  display: flex;
+  height: 90vh;
   width: 100vw;
+  display: flex;
+  margin-bottom: 2vh;
+  background-color: #242323cc;
+  justify-content: space-around;
 }
 .contactWatermark {
-  text-transform: uppercase;
-  letter-spacing: 10vw;
-  position: absolute;
-  left: 2vw;
-  font-weight: bolder;
-  font-size: 10em;
+  height: 90vh;
   color: black;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
+  font-size: 10em;
+  line-height: 90vh;
   user-select: none;
+  font-weight: bolder;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  text-transform: uppercase;
+  -webkit-user-select: none;
 }
+.contactForm {
+  display: flex;
+  padding: 2em;
+  border-radius: 1rem;
+  height: 52vh;
+  margin-top: 20vh;
+  width: auto;
+  border: 3px solid black;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+}
+.col-md-12 {
+  position: relative;
+  width: 100%;
+}
+.form-control {
+  background-color: black;
+  border: none;
+  padding: 0.5em;
+  color: rgb(160, 153, 153);
+  border-radius: 10px;
+  width: 94%;
+  font-size: 1.5rem;
+  margin: 10px 0px;
+  caret-color: rgb(100, 0, 0);
+}
+.form-control::placeholder {
+  color: rgba(255, 0, 0, 0.412);
+  font-size: 0.9em;
+  text-transform: uppercase;
+}
+.form-control:focus {
+  outline: none;
+  place-content: none;
+  color: rgb(160, 153, 153);
+}
+#projects {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+}
+.form-control:focus::placeholder {
+  color: transparent;
+  transition: 0.2s;
+}
+.innerContainer {
+  width: 50vw;
+  font-size: 1.4em;
+}
+.innerContainer > h2 {
+  text-transform: uppercase;
+}
+.btn {
+  background-color: rgba(255, 0, 0, 0.2);
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  color: rgb(133, 130, 130);
+  padding: 0.2em;
+  font-size: 1.9rem;
+}
+/* end of contact form */
 .bannerBack {
   background-size: cover;
   background-blend-mode: color;
   height: 95vh;
   width: 100vw;
 }
-.aboutWatermark {
-  display: block;
-
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-}
-.aboutWatermark > span {
-  position: absolute;
-  left: 1vw;
-  margin: 40px;
-  color: black;
-  font-size: 20vh;
-  font-weight: bolder;
-  letter-spacing: 30px;
-  text-transform: uppercase;
-}
 .bannerWatermark {
   display: block;
   z-index: -100;
 }
-.bannerWatermark > span1 {
+.bannerWatermark > .mern {
   text-transform: uppercase;
   font-size: 20vh;
   position: absolute;
@@ -389,4 +417,71 @@ a {
   height: 200vh;
 
   width: 40vw;
+}
+.Log {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 35vw;
+  height: 93vh;
+}
+#Login {
+  height: 60vh;
+  width: 100%;
+  border: 5px solid rgb(46, 46, 46);
+  background-color: rgb(46, 46, 46);
+  border-radius: 1em;
+}
+.loginLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: rgb(46, 46, 46);
+  height: 5vh;
+  width: 35vw;
+  text-transform: uppercase;
+  border-bottom: 5px solid rgb(46, 46, 46);
+}
+.loginLink > .at {
+  padding: 10px 20px;
+  font-weight: bolder;
+
+  border-radius: 20px;
+  /* background-color: rgb(0, 0, 0); */
+  border: 2px solid black;
+  font-size: 1.6em;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.inactive {
+  background-color: black;
+}
+.active {
+  background-color: rgba(255, 0, 0, 0.2);
+  outline: none;
+  border: none;
+}
+.loginLink > .at:hover {
+  border: 2px solid red;
+  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #e60000, 0 0 20px #e68a00,
+    0 0 25px #e65c00, 0 0 30px #e60000, 0 0 35px #e60000 inset;
+  transition-duration: 0.2s;
+}
+#signin,
+#signup {
+  display: flex;
+  padding: 2em;
+  height: 47vh;
+
+  width: auto;
+  border-radius: 1em;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(6, 19, 0);
+}
+#sup {
+  width: 98%;
 }
