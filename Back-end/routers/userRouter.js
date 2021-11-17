@@ -1,8 +1,9 @@
-const Model = require("../models/userModel");
+const userModel = require("../models/dataModel");
+const messageModel = require("../models/dataModel");
 const router = require("express").Router();
 
 router.post("/add", (req, res) => {
-  new Model(req.body)
+  new userModel(req.body)
     .save()
     .then(() => {
       console.log("user data saved from user Router!");
