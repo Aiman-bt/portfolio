@@ -1,4 +1,4 @@
-const mongoose = require("mongoose")
+const mongoose = require("mongoose");
 const uri = require("./config").api_url;
 
 mongoose
