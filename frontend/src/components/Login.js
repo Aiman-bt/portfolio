@@ -10,30 +10,34 @@ function Login() {
   return (
     <div className="Log">
       <div id="Login">
-        <div className="loginLink">
-          <Link className="at inactive" to="/">
-            home
-          </Link>
-          <span
-            className={`${first} at`}
-            onClick={() => {
-              setFirst("active");
-              setSecond("inactive");
-            }}
-          >
-            Sign In
-          </span>
-          <span
-            className={`${second} at`}
-            onClick={() => {
-              setFirst("inactive");
-              setSecond("active");
-            }}
-          >
-            Sign up
-          </span>
+        <div className="llink">
+          <div className="loginLink">
+            <Link className="at inactive" to="/">
+              home
+            </Link>
+            <div>
+              <span
+                className={`${first} signin`}
+                onClick={() => {
+                  setFirst("active");
+                  setSecond("inactive");
+                }}
+              >
+                Sign In
+              </span>
+              <span
+                className={`${second} signup`}
+                onClick={() => {
+                  setFirst("inactive");
+                  setSecond("active");
+                }}
+              >
+                Sign up
+              </span>
+            </div>
+          </div>
         </div>
-        {first === "active" ? <Signin /> : <Signup />}
+        <div>{first === "active" ? <Signin /> : <Signup />}</div>
       </div>
     </div>
   );

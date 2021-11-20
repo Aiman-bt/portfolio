@@ -43,7 +43,14 @@ function Navbar() {
           <span className="l">L</span>ogin /<span className="s">S</span>ignup
         </Links>
       </div>
-      <Link to="contact" className="navContact">
+      <Link
+        to="/"
+        className="navContact"
+        duration={1000}
+        onClick={() => {
+          scroll.scrollToBottom();
+        }}
+      >
         <span className="c">c</span>ontact Me
       </Link>
       <div className="hamburger">

@@ -9,6 +9,7 @@ import Blogs from "./components/Blogs";
 import Login from "./components/Login";
 import Work from "./components/Work";
 import Footer from "./components/Footer";
+import Admin from "./components/Admin";
 
 function App() {
   return (
@@ -30,6 +31,9 @@ function App() {
         </Route>
         <Route path="/contact">
           <Contact />
+        </Route>
+        <Route path="/admin">
+          <Admin />
         </Route>
       </Switch>
       <Footer />
